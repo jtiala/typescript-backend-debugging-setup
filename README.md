@@ -4,6 +4,7 @@ This is a boilerplate/starter project for [TypeScript][typescript] [express][exp
 
 ## Usage
 
+- First, run `yarn` to install dependencies.
 - Run `docker-compose up` for dockerized debugger enabled development environment. Attach debugger using the included `Docker: Attach to Node` launch config.
 - Run `yarn start:dev` for non-dockerized debugger enabled development environment. Attach debugger using the included `Attach to Node` launch config.
 - Run `yarn build` for building for production environments.
