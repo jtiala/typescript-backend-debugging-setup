@@ -10,32 +10,32 @@
     "url": "https://github.com/jtiala/typescript-backend-debugging-setup"
   },
   "scripts": {
-    "clean": "rimraf dist",
-    "build": "yarn clean && NODE_ENV=production tsc",
-    "start": "NODE_ENV=production node dist/index.js",
+    "clean": "rimraf build",
+    "build": "npm run clean && NODE_ENV=production tsc",
+    "start": "NODE_ENV=production node build/index.js",
     "start:dev": "nodemon --inspect=0.0.0.0:9229 --nolazy src/index.ts",
     "format": "prettier --write '**/*.{ts,js,json,css,scss,html,md,yml,yaml}'",
-    "lint:ts": "eslint src/**/*.{ts,js}",
-    "lint:ts:fix": "eslint src/**/*.{ts,js} --fix",
+    "lint:ts": "eslint src/**/*.ts",
+    "lint:ts:fix": "eslint src/**/*.ts --fix",
     "lint:other": "prettier --list-different '**/*.{json,md,yml,yaml}'",
-    "lint": "yarn lint:ts && yarn lint:other",
-    "lint:fix": "yarn lint:ts:fix && format"
+    "lint": "npm run lint:ts && npm run lint:other",
+    "lint:fix": "npm run lint:ts:fix && format"
   },
   "dependencies": {
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "@types/express": "^4.17.0",
-    "@types/node": "^12.0.12",
-    "@typescript-eslint/eslint-plugin": "^1.11.0",
-    "@typescript-eslint/parser": "^1.11.0",
-    "eslint": "^6.0.1",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "nodemon": "^1.19.1",
+    "@types/express": "^4.17.1",
+    "@types/node": "^12.12.3",
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/parser": "^2.6.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "nodemon": "^1.19.4",
     "prettier": "^1.18.2",
-    "rimraf": "^2.6.3",
-    "ts-node": "^8.3.0",
-    "typescript": "^3.5.2"
+    "rimraf": "^3.0.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4"
   }
 }
